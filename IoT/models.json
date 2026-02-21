@@ -1,0 +1,86 @@
+{
+    "note_models": [
+        {
+            "__type__": "NoteModel",
+            "crowdanki_uuid": "77e316ae-5666-4ec8-95c6-5377d6e5e0d9",
+            "css": ".card {\n    font-family: arial;\n    font-size: 20px;\n    line-height: 1.5;\n    text-align: left;\n    color: black;\n    background-color: white;\n}\n",
+            "flds": [
+                {
+                    "collapsed": false,
+                    "description": "",
+                    "excludeFromSearch": false,
+                    "font": "Arial",
+                    "id": 3523666479242158417,
+                    "name": "Front",
+                    "ord": 0,
+                    "plainText": false,
+                    "preventDeletion": false,
+                    "rtl": false,
+                    "size": 20,
+                    "sticky": false,
+                    "tag": null
+                },
+                {
+                    "collapsed": false,
+                    "description": "",
+                    "excludeFromSearch": false,
+                    "font": "Arial",
+                    "id": 240002636660958272,
+                    "name": "Back",
+                    "ord": 1,
+                    "plainText": false,
+                    "preventDeletion": false,
+                    "rtl": false,
+                    "size": 20,
+                    "sticky": false,
+                    "tag": null
+                },
+                {
+                    "collapsed": false,
+                    "description": "",
+                    "excludeFromSearch": false,
+                    "font": "Arial",
+                    "id": 8523476766055446390,
+                    "name": "Context",
+                    "ord": 2,
+                    "plainText": false,
+                    "preventDeletion": false,
+                    "rtl": false,
+                    "size": 20,
+                    "sticky": false,
+                    "tag": null
+                }
+            ],
+            "latexPost": "\\end{document}",
+            "latexPre": "\\documentclass[12pt]{article}\n\\special{papersize=3in,5in}\n\\usepackage[utf8]{inputenc}\n\\usepackage{amssymb,amsmath}\n\\pagestyle{empty}\n\\setlength{\\parindent}{0in}\n\\begin{document}\n",
+            "latexsvg": false,
+            "name": "Basic",
+            "originalStockKind": 1,
+            "req": [
+                [
+                    0,
+                    "any",
+                    [
+                        0
+                    ]
+                ]
+            ],
+            "sortf": 0,
+            "tmpls": [
+                {
+                    "afmt": "{{FrontSide}}\n\n<hr id=answer>\n\n{{Back}}\n<br>\n{{Context}}",
+                    "bafmt": "",
+                    "bfont": "",
+                    "bqfmt": "",
+                    "bsize": 0,
+                    "did": null,
+                    "id": -1779966220289044185,
+                    "name": "Card 1",
+                    "ord": 0,
+                    "qfmt": "{{Front}}\n\n<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css\">\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js\"></script>\n\n<!-- and it's easy to individually load additional languages -->\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/vhdl.min.js\"></script>\n\n<script>hljs.highlightAll();</script>\n\n<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/katex@0.16.28/dist/katex.min.css\"\n        integrity=\"sha384-Wsr4Nh3yrvMf2KCebJchRJoVo1gTU6kcP05uRSh5NV3sj9+a8IomuJoQzf3sMq4T\" crossorigin=\"anonymous\">\n\n<!-- The loading of KaTeX is deferred to speed up page rendering -->\n    <script defer src=\"https://cdn.jsdelivr.net/npm/katex@0.16.28/dist/katex.min.js\"\n        integrity=\"sha384-+W9OcrYK2/bD7BmUAk+xeFAyKp0QjyRQUCxeU31dfyTt/FrPsUgaBTLLkVf33qWt\"\n        crossorigin=\"anonymous\"></script>\n\n<!-- To automatically render math in text elements, include the auto-render extension: -->\n    <script defer src=\"https://cdn.jsdelivr.net/npm/katex@0.16.28/dist/contrib/auto-render.min.js\"\n        integrity=\"sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh\" crossorigin=\"anonymous\"\n        onload=\"renderMathInElement(document.body, {\n        delimiters: [\n        { left: '$$', right: '$$', display: true },\n        { left: '$',  right: '$',  display: false },\n        { left: '\\\\(', right: '\\\\)', display: false },\n        { left: '\\\\[', right: '\\\\]', display: true }\n        ],\n        throwOnError: false\n    });\"></script>"
+                }
+            ],
+            "type": 0
+        }
+    ]
+}
