@@ -426,9 +426,16 @@ class DeckViewer {
             const src = script.getAttribute('src');
             if (src) {
                 // External script
+                // External script — preserve ordering/timing attributes
                 if (!document.querySelector(`script[src="${src}"]`)) {
                     const newScript = document.createElement('script');
                     newScript.src = src;
+                    // Preserve defer/async so dependency order is maintained
+                    if (script.defer)  newScript.defer  = true;
+                    if (script.async)  newScript.async  = true;
+                    // Preserve onload so e.g. KaTeX auto-render fires after katex.min.js
+                    const onload = script.getAttribute('onload');
+                    if (onload) newScript.setAttribute('onload', onload);
                     document.body.appendChild(newScript);
                 }
                 script.remove();
