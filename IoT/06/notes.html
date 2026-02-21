@@ -5,6 +5,38 @@
 </head>
 <body>
 <div class="cards" deck="06">
+
+<div class="card" guid="iot-06-q03" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">Why are <b>Bluetooth Classic</b> and <b>BLE</b> considered different protocols? What are their typical use cases?</div>
+<div class="field"><ul>
+<li>They differ in <b>spectrum usage</b>, <b>packet formats</b>, and <b>data exchange schemes</b> — not just power levels.</li>
+<li><b>Bluetooth Classic:</b> Higher throughput, higher energy consumption → suited for continuous audio streaming, file transfer.</li>
+<li><b>BLE (Bluetooth Low Energy):</b> Lower energy, lower data rate → suited for IoT sensors, wearables, beacons, periodic small data transmissions.</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 6 – Bluetooth / BLE</b></li>
+<li><b>Folie 11 / PDF p.11:</b> Bluetooth Classic vs. BLE — protocol differences and use cases</li>
+</ul></div>
+<div class="tags">lec06</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-06-q04" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">How does BLE organize the <b>2.4 GHz band</b>, and why is this structure useful?</div>
+<div class="field"><ul>
+<li>BLE uses ~80 MHz of the 2.4 GHz band, divided into <b>40 channels × 2 MHz</b>:</li>
+<li><b>37 data channels</b> – used for bidirectional data transfer after connection.</li>
+<li><b>3 advertising channels</b> (channels 37, 38, 39) – used for device discovery, broadcasting, and connection setup.</li>
+<li>This separation allows efficient <b>discovery/connection setup</b> independent of data traffic, with good coexistence and <b>Adaptive Frequency Hopping (AFH)</b> on data channels to avoid interference (e.g., Wi-Fi).</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 6 – Bluetooth / BLE</b></li>
+<li><b>Folie 14–15 / PDF pp.14–15:</b> BLE channel structure — 40 channels, 3 advertising vs. 37 data channels, 2.4 GHz coexistence</li>
+</ul></div>
+<div class="tags">lec06</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
 </div>
 </body>
 </html>

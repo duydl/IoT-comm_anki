@@ -5,6 +5,114 @@
 </head>
 <body>
 <div class="cards" deck="05">
+
+<div class="card" guid="iot-05-q06" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">Which IEEE 802.15.4 PHY mode provides the <b>highest data rate</b>, and what is that rate?</div>
+<div class="field"><ul>
+<li>The <b>2.4 GHz</b> PHY mode provides the highest rate: $$\boxed{250\ \text{kbit/s}}$$</li>
+<li>The 868 MHz and 915 MHz bands operate at lower rates (20 / 40 kbit/s).</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 5 – IEEE 802.15.4</b></li>
+<li><b>Slide 4 / PDF p.4:</b> Zigbee / 802.15.4 max 250 kbit/s at 2.4 GHz</li>
+<li><b>Slide 7 / PDF p.7:</b> PHY band overview and data rates</li>
+</ul></div>
+<div class="tags">lec05</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-05-q07" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">List the main PHY packet fields in <b>IEEE 802.15.4</b>.</div>
+<div class="field"><ul>
+<li><b>Preamble</b> – synchronization sequence</li>
+<li><b>SFD (Start of Frame Delimiter)</b> – marks the start of the frame</li>
+<li><b>PHR (PHY Header)</b> – contains frame length</li>
+<li><b>PSDU (PHY Service Data Unit)</b> – the actual data payload</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 5 – IEEE 802.15.4</b></li>
+<li><b>Slide 8 / PDF p.8:</b> PHY packet structure with all fields</li>
+</ul></div>
+<div class="tags">lec05</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-05-q08" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">What are the <b>two main MAC operation modes</b> in IEEE 802.15.4?</div>
+<div class="field"><ul>
+<li><b>Beacon-enabled mode:</b> A coordinator periodically broadcasts beacon frames; devices follow a duty-cycled superframe structure (CAP + CFP + inactive period).</li>
+<li><b>Non-beacon-enabled mode:</b> No coordinator beacons; devices use unslotted CSMA-CA for random access.</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 5 – IEEE 802.15.4</b></li>
+<li><b>Slide 9 / PDF p.9:</b> MAC protocol classification — beacon-enabled vs. non-beacon-enabled</li>
+</ul></div>
+<div class="tags">lec05</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-05-q09" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">Explain the difference between <b>contention-based</b> and <b>contention-free</b> access in IEEE 802.15.4.</div>
+<div class="field"><ul>
+<li><b>Contention-based (CSMA-CA):</b> Devices listen before transmitting; if medium is busy, they wait a random backoff. No timing guarantees.</li>
+<li><b>Contention-free (GTS – Guaranteed Time Slots):</b> The coordinator pre-assigns exclusive time slots to specific devices. Provides deterministic, bounded latency — suited for time-sensitive traffic.</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 5 – IEEE 802.15.4</b></li>
+<li><b>Slide 10 / PDF p.10:</b> CSMA-CA mechanism and GTS contention-free slot assignment</li>
+</ul></div>
+<div class="tags">lec05</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-05-q10" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">In beacon-enabled IEEE 802.15.4, what are the main parts of the <b>superframe</b>, and what is the benefit of the inactive period?</div>
+<div class="field"><ul>
+<li><b>Beacon</b> – coordinator frame that starts and defines the superframe.</li>
+<li><b>CAP (Contention Access Period)</b> – devices compete using slotted CSMA-CA.</li>
+<li><b>CFP (Contention-Free Period)</b> – optional GTS slots assigned by coordinator.</li>
+<li><b>Inactive Period</b> – no transmissions; all devices may <b>sleep</b> to save energy.</li>
+<li>→ The inactive period is key to achieving the <b>low power consumption</b> required for battery-powered IoT nodes.</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 5 – IEEE 802.15.4</b></li>
+<li><b>Slides 11–13 / PDF pp.11–13:</b> Superframe structure, CAP/CFP/inactive period, duty cycle and energy efficiency</li>
+</ul></div>
+<div class="tags">lec05</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-05-q11" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">Why is <b>IEEE 802.15.4</b> more suitable than Wi-Fi for IoT sensor networks?</div>
+<div class="field"><ul>
+<li>802.15.4 is designed for <b>low power consumption</b> — uses duty cycling and sleep periods to extend battery life.</li>
+<li><b>Low data rate</b> (max 250 kbit/s) is sufficient for sensor readings.</li>
+<li><b>Small packet sizes</b> reduce transmission time and energy per packet.</li>
+<li>Low complexity and short-range communication suit simple embedded devices.</li>
+<li>Wi-Fi (802.11) is optimized for high throughput but requires far more energy — unsuitable for coin-cell battery sensors.</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 5 – IEEE 802.15.4</b></li>
+<li><b>Slides 3–5 / PDF pp.3–5:</b> 802.15.4 overview features, low transmission power, target applications</li>
+</ul></div>
+<div class="tags">lec05</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-05-q12" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">A smart-home system has <b>battery-powered sensors</b> and a <b>video camera</b>. Which wireless protocol family is more suitable for each, and why?</div>
+<div class="field"><ul>
+<li><b>Battery sensors → IEEE 802.15.4</b> (e.g., Zigbee): Low power, low data rate, small packets → long battery life.</li>
+<li><b>Video camera → IEEE 802.11</b> (Wi-Fi): Much higher throughput needed for continuous video streaming.</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 5 – IEEE 802.15.4</b> (low-power / low-rate design, Slides 3–5)</li>
+<li><b>Lecture 4 – IEEE 802.11</b> (high data rate progression, Folien 5–13)</li>
+</ul></div>
+<div class="tags">lec05</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
 </div>
 </body>
 </html>

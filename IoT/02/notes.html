@@ -5,6 +5,99 @@
 </head>
 <body>
 <div class="cards" deck="02">
+
+<div class="card" guid="iot-02-q05" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">What is the difference between <b>multiplexing</b> and <b>medium access</b>, and why are both needed?</div>
+<div class="field"><ul>
+<li><b>Multiplexing:</b> Technique to allow concurrent usage of a medium without interference (SDMA / FDMA / TDMA / CDMA).</li>
+<li><b>Medium access:</b> Mechanism that controls <i>how</i> users actually access the medium — often by combining multiplexing methods with scheduling/control rules.</li>
+<li>Multiplexing provides the <b>resource separation idea</b>; medium access provides the <b>practical control / scheduling</b> on top.</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 2 – Medium Access and Cellular Concepts</b></li>
+<li><b>Folie 2 / PDF p.2:</b> Multiplexing + medium access overview</li>
+</ul></div>
+<div class="tags">lec02</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-02-q06" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">State one key characteristic (or requirement) of each: <b>FDMA</b>, <b>TDMA</b>, and <b>CDMA</b>.</div>
+<div class="field"><ul>
+<li><b>FDMA (Frequency Division Multiple Access):</b> Fixed frequency bands are assigned to each channel; no timing coordination needed between users.</li>
+<li><b>TDMA (Time Division Multiple Access):</b> Users share the same channel in different time slots; requires <b>synchronization</b>.</li>
+<li><b>CDMA (Code Division Multiple Access):</b> Users can share the same frequency and time using orthogonal codes; requires known codes and <b>accurate synchronization</b> plus complex receivers.</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 2 – Medium Access and Cellular Concepts</b></li>
+<li><b>Folie 4–7 / PDF pp.4–7:</b> FDMA, TDMA, CDMA descriptions, tradeoffs, and requirements</li>
+</ul></div>
+<div class="tags">lec02</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-02-q07" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">In CDMA, why can a receiver recover one sender's bit from the combined sum signal if orthogonal codes are used?</div>
+<div class="field"><ul>
+<li>The receiver computes the <b>inner product</b> (correlation) of the received signal with the <b>target sender's code</b>.</li>
+<li>Because all codes are <b>orthogonal</b>, the cross-terms from other users cancel out (sum to zero).</li>
+<li>The <b>sign</b> of the remaining correlation result reveals the transmitted bit (+1 or −1).</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 2 – Medium Access and Cellular Concepts</b></li>
+<li><b>Folie 8–9 / PDF pp.8–9:</b> CDMA transmit and decode example with orthogonal codes</li>
+</ul></div>
+<div class="tags">lec02</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-02-q08" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">In a cellular system, the frequency reuse distance is $D = \sqrt{3N} \cdot R$. If $N = 7$ and $R = 500\text{ m}$, compute $D$.</div>
+<div class="field"><ul>
+<li><div>$$D = \sqrt{3 \cdot 7} \cdot 500 = \sqrt{21} \cdot 500$$</div></li>
+<li><div>$$\sqrt{21} \approx 4.583$$</div></li>
+<li><div>$$D \approx 4.583 \times 500 = 2291.5\text{ m}$$</div></li>
+<li>$$\boxed{D \approx 2.29\ \text{km}}$$</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 2 – Medium Access and Cellular Concepts</b></li>
+<li><b>Folie 10 / PDF p.10:</b> Frequency reuse formula $D = \sqrt{3N} \cdot R$ and interference motivation</li>
+</ul></div>
+<div class="tags">lec02</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-02-q09" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">Why is one medium access strategy not enough for all wireless systems?</div>
+<div class="field"><ul>
+<li>Systems have different requirements: range, traffic load, latency, complexity, synchronization ability, interference level.</li>
+<li><b>TDMA:</b> Needs synchronization but gives predictable timing → good for real-time traffic.</li>
+<li><b>CDMA:</b> Allows simultaneous users but needs code management and complex receivers.</li>
+<li><b>FDMA:</b> Simple conceptually but consumes fixed frequency resources and scales poorly in dense systems.</li>
+<li>No single strategy optimally trades off <b>latency vs. throughput</b>, <b>energy vs. performance</b>, and <b>simplicity vs. determinism</b> simultaneously.</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 2 – Medium Access and Cellular Concepts</b></li>
+<li><b>Folie 2–7 / PDF pp.2–7:</b> Overview + tradeoffs/requirements across SDMA, FDMA, TDMA, CDMA</li>
+</ul></div>
+<div class="tags">lec02</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-02-q10" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">What is the difference between <b>hard handover</b> and <b>soft handover</b> in cellular networks?</div>
+<div class="field"><ul>
+<li><b>Hard handover ("break before make"):</b> The old connection is disconnected <i>before</i> the new one is established. Brief signal loss possible.</li>
+<li><b>Soft handover ("make before break"):</b> The new connection is established <i>before</i> disconnecting the old one. Seamless transition; used in CDMA-based systems (e.g., UMTS).</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 2 – Medium Access and Cellular Concepts</b></li>
+<li><b>Folie 14 / PDF p.14:</b> Hard handover vs. soft handover definitions</li>
+</ul></div>
+<div class="tags">lec02</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
 </div>
 </body>
 </html>

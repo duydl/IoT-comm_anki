@@ -5,6 +5,73 @@
 </head>
 <body>
 <div class="cards" deck="01">
+
+<div class="card" guid="iot-01-q01" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">A wireless sensor node uses an antenna of length $L = 3\text{ cm}$. Assume $L = \lambda/4$ for efficient radiation. What carrier frequency should be used?</div>
+<div class="field"><ul>
+<li><div><b>Find wavelength:</b> $$\lambda = 4L = 4 \cdot 0.03 = 0.12\ \text{m}$$</div></li>
+<li><div><b>Find frequency</b> using $f = c/\lambda$, $c = 3\times10^8\ \text{m/s}$: $$f = \frac{3\times10^8}{0.12} = 2.5\times10^9\ \text{Hz}$$</div></li>
+<li>$$\boxed{f = 2.5\ \text{GHz}}$$</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 1 – Basics of Wireless Communications</b></li>
+<li><b>Folie 9 / PDF p.9:</b> Antenna size proportional to wavelength; λ/4 rule</li>
+<li><b>Folie 8 / PDF p.8:</b> Speed of light shown in modulation/frequency context</li>
+</ul></div>
+<div class="tags">lec01</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-01-q02" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">Name and briefly explain the three main wireless propagation effects. Which one can cause a receiver to get a signal even without line-of-sight?</div>
+<div class="field"><ul>
+<li><b>Reflection:</b> Signal bounces off a large object (much larger than wavelength); can cause phase shift and constructive/destructive interference.</li>
+<li><b>Diffraction:</b> Signal bends around edges/obstacles.</li>
+<li><b>Scattering:</b> Signal is dispersed by objects with size comparable to wavelength.</li>
+<li><div>The effect that allows reception <b>without LOS</b>: $$\boxed{\text{Diffraction}}$$</div></li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 1 – Basics of Wireless Communications</b></li>
+<li><b>Folie 3–4 / PDF pp.3–4:</b> Reflection, diffraction, scattering propagation effects</li>
+</ul></div>
+<div class="tags">lec01</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-01-q03" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">Why can QAM achieve better bandwidth efficiency than simple AM?</div>
+<div class="field"><ul>
+<li>QAM combines <b>two orthogonal carriers</b> (I and Q channels).</li>
+<li>Two sub-streams can be transmitted <b>in parallel</b> over the same channel bandwidth.</li>
+<li>This <b>doubles</b> the spectral efficiency compared to simple AM, which uses only one carrier dimension.</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 1 – Basics of Wireless Communications</b></li>
+<li><b>Folie 22 / PDF p.22:</b> "Orthogonal signals", "double bandwidth efficiency"; I/Q channel concept</li>
+</ul></div>
+<div class="tags">lec01</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-01-q04" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">Given $\dfrac{P_{rx}}{P_{tx}} = \dfrac{A_{tx}A_{rx}G_{tx}G_{rx}}{d^2}$, show how to separate the expression into a <b>design-time</b> term and a <b>runtime</b> term using logarithms.</div>
+<div class="field"><ul>
+<li><div>Take $10\log_{10}$ on both sides:
+$$10\log_{10}\!\left(\frac{P_{rx}}{P_{tx}}\right) = 10\log_{10}(A_{tx}) + 10\log_{10}(A_{rx}) + 10\log_{10}(G_{tx}) + 10\log_{10}(G_{rx}) - 20\log_{10}(d)$$</div></li>
+<li><div><b>Static (design-time):</b> $$10\log_{10}(A_{tx})+10\log_{10}(A_{rx})+10\log_{10}(G_{tx})+10\log_{10}(G_{rx})$$
+Antenna sizes and nominal gains — fixed during design.</div></li>
+<li><div><b>Dynamic (runtime):</b> $$-20\log_{10}(d)$$
+Distance $d$ — changes at runtime.</div></li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 1 – Basics of Wireless Communications</b></li>
+<li><b>Folie 6 / PDF p.6:</b> Received/transmitted power relation and antenna/path factors</li>
+<li><b>Folie 7 / PDF p.7:</b> Path loss in dB vs. distance — supports log decomposition</li>
+</ul></div>
+<div class="tags">lec01</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
 </div>
 </body>
 </html>

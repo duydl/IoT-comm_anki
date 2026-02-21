@@ -5,6 +5,41 @@
 </head>
 <body>
 <div class="cards" deck="07">
+
+<div class="card" guid="iot-07-q05" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">What are the major <b>limitations of LoRaWAN</b> that motivate the development of <b>DSME-LoRa / 6LoRa</b>?</div>
+<div class="field"><ul>
+<li><b>Unreliable uplink communication</b> – no guaranteed delivery in standard LoRaWAN.</li>
+<li><b>Restricted downlink communication</b> – downlink windows are narrow and infrequent.</li>
+<li><b>No peer-to-peer (P2P) communication</b> – all traffic must go through a gateway/server.</li>
+<li><b>Requires permanent infrastructure backhaul</b> – cannot work without a gateway connected to a network server.</li>
+<li>These motivate a more flexible, reliable MAC (DSME) and full IPv6 integration (6LoRa) to enable multi-hop and direct device-to-device communication.</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 7 – DSME-LoRa / 6LoRa</b></li>
+<li><b>Slides ~10–15 / PDF pp.10–15:</b> LoRaWAN limitations and motivation for DSME-LoRa</li>
+</ul></div>
+<div class="tags">lec07</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-07-q06" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">What is the role of <b>Channel Activity Detection (CAD)</b> in DSME-LoRa, and why is it beneficial?</div>
+<div class="field"><ul>
+<li>LoRa was not originally designed for carrier sensing, but <b>CAD</b> acts as a practical <b>clear-channel assessment</b> method: the radio checks for LoRa preamble activity on the channel before transmitting.</li>
+<li><b>Benefits:</b></li>
+<li>Packet Reception Rate (PRR) can improve by up to <b>~17%</b>.</li>
+<li>Retransmissions can drop by up to <b>~95%</b>.</li>
+<li>A single CAD operation often costs less energy than a retransmission (net energy saving).</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 7 – DSME-LoRa / 6LoRa</b></li>
+<li><b>DSME-LoRa slides ~41–42 / PDF pp.41–42:</b> CAD mechanism, PRR improvement, retransmission reduction, energy tradeoff</li>
+</ul></div>
+<div class="tags">lec07</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
 </div>
 </body>
 </html>

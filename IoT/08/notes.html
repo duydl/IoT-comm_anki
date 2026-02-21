@@ -5,6 +5,50 @@
 </head>
 <body>
 <div class="cards" deck="08">
+
+<div class="card" guid="iot-08-q07" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">Why is <b>header compression</b> necessary in 6LoWPAN?</div>
+<div class="field"><ul>
+<li>IPv6 mandates a minimum MTU of <b>1280 bytes</b>, but IEEE 802.15.4 leaves only about <b>80–100 bytes</b> of payload after frame and protocol overhead.</li>
+<li>Without compression, IPv6 headers (~40 bytes) + UDP header (~8 bytes) would consume most of the available payload.</li>
+<li>6LoWPAN compresses IPv6/UDP headers to reduce per-packet overhead, avoid unnecessary fragmentation, and improve:
+<ul>
+<li>Payload efficiency</li>
+<li>Energy consumption (fewer bytes to transmit)</li>
+<li>Throughput on constrained links</li>
+</ul></li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 8 – 6LoWPAN</b></li>
+<li><b>Slides 47–48 / PDF pp.47–48:</b> Header compression motivation — large IPv6 datagram vs. small 802.15.4 payload</li>
+<li><b>Slide 62 / PDF p.62:</b> 802.15.4 payload only ~80–100 bytes — reinforces compression need</li>
+</ul></div>
+<div class="tags">lec08</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-08-q08" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">What is <b>LOWPAN_IPHC</b>, and what benefit does it provide in 6LoWPAN?</div>
+<div class="field"><ul>
+<li><b>LOWPAN_IPHC</b> is the improved IPv6 header compression encoding defined in <b>RFC 6282</b>.</li>
+<li>It compresses fields by elision or context-based inference:
+<ul>
+<li>Traffic Class / Flow Label (often all zeros → elided)</li>
+<li>Hop Limit (common values → 1 byte encoding)</li>
+<li>Source / Destination addresses (can be derived from MAC address or multicast prefix → fully elided)</li>
+</ul></li>
+<li><b>Best case:</b> IPv6 header compressed to as few as <b>2 octets</b>.</li>
+<li><b>Multi-hop / routing case:</b> Even then, typically reduced to ~<b>7 octets</b>.</li>
+<li>Combined with <b>NHC (Next Header Compression)</b>, UDP header can be further compressed to ~4 bytes (from 8 bytes).</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 8 – 6LoWPAN</b></li>
+<li><b>Slides 57–60 / PDF pp.57–60:</b> LOWPAN_IPHC encoding format, field-by-field compression, NHC for UDP</li>
+</ul></div>
+<div class="tags">lec08</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
 </div>
 </body>
 </html>

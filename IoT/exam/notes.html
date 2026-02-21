@@ -5,6 +5,238 @@
 </head>
 <body>
 <div class="cards" deck="exam">
+
+<div class="card" guid="iot-exam-q01" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field"><b>Q1 – Carrier frequency for a 1 mm antenna (antenna = λ/8)</b><br>What is the carrier frequency if the antenna length is $L = 1\text{ mm}$ and $L = \lambda/8$?</div>
+<div class="field"><ul>
+<li><div><b>Step 1 – Find wavelength:</b></div>
+<div>$$\lambda = 8L = 8 \times 1\text{ mm} = 8\text{ mm} = 8 \times 10^{-3}\text{ m}$$</div></li>
+<li><div><b>Step 2 – Find frequency using $f = c/\lambda$ with $c \approx 3\times 10^8\text{ m/s}$:</b></div>
+<div>$$f = \frac{3\times 10^8}{8\times 10^{-3}} = 3.75\times 10^{10}\text{ Hz}$$</div></li>
+<li><div><b>Result:</b> $$\boxed{f \approx 37.5\ \text{GHz}}$$</div></li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture:</b> <b>ch1 – Basics of Wireless Communications</b></li>
+<li><b>Folie 9 (PDF p. 9):</b> Antenna size proportional to wavelength; λ/4 rule (very close to your formula use)</li>
+<li><b>Folie 8 (PDF p. 8):</b> Shows $c = 3\times10^8$ and modulation/frequency context</li>
+</ul></div>
+<div class="tags">exam</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-exam-q02" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field"><b>Q2 – Packets per second at 250 kbps?</b><br>How many 20-byte packets per second can be sent at 250 kbps with a 10 ms mandatory gap between packets?</div>
+<div class="field"><ul>
+<li><div><b>Packet size in bits:</b> $20\text{ B} = 160\text{ bits}$</div></li>
+<li><div><b>Transmission time per packet:</b> $$t_{tx} = \frac{160}{250{,}000} = 0.64\text{ ms}$$</div></li>
+<li><div><b>One cycle (tx + gap):</b> $0.64 + 10 = 10.64\text{ ms}$</div></li>
+<li><div><b>Constraint for $n$ packets in 1 s (1000 ms):</b></div>
+<div>$$n \cdot 0.64 + (n-1)\cdot 10 \le 1000$$</div>
+<div>$$10.64n - 10 \le 1000 \;\Rightarrow\; 10.64n \le 1010 \;\Rightarrow\; n \le 94.92$$</div></li>
+<li><div><b>Result:</b> $$\boxed{94\ \text{packets/s}}$$</div></li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture:</b> <b>ch5 – IEEE 802.15.4</b></li>
+<li><b>Slide 4 (PDF p. 4):</b> Zigbee / IEEE 802.15.4 max data rate <b>250 kbit/s</b> (same rate referenced)</li>
+<li><b>Slide 8 (PDF p. 8):</b> PHY packet structure / packet size context</li>
+</ul></div>
+<div class="tags">exam</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-exam-q03" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field"><b>Q3 – Why is QAM popular, and what are its challenges?</b></div>
+<div class="field"><ul>
+<li><div><b>Why popular:</b></div>
+<ul>
+<li>QAM uses <b>both amplitude and phase</b> to encode data.</li>
+<li>It can send <b>more bits per symbol</b> than simpler schemes (e.g., BPSK/QPSK).</li>
+<li>Achieves <b>high spectral efficiency</b> — more data in the same bandwidth.</li>
+</ul></li>
+<li><div><b>Challenges:</b></div>
+<ul>
+<li>Higher-order QAM (64-QAM, 256-QAM) has constellation points closer together → <b>more sensitive to noise, interference, distortion</b>.</li>
+<li>Requires better <b>SNR</b>, more linear amplifiers, accurate synchronization (phase/frequency), and more complex receivers.</li>
+</ul></li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Primary lecture:</b> <b>ch1 – Basics of Wireless Communications</b></li>
+<li><b>Folie 21–26 (PDF pp. 21–26):</b> QAM introduction, process, demodulation</li>
+<li><b>Folie 22 (PDF p. 22):</b> Bandwidth efficiency and orthogonal carriers ("why popular")</li>
+<li><b>Also in:</b> ch4 – IEEE 802.11, Folie 14 (QAM in Wi-Fi PHY); ch3 – Mobile Networks, Folie 13 (LTE: 16/64/128 QAM)</li>
+</ul></div>
+<div class="tags">exam</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-exam-q04" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field"><b>Q4 – What is packet switching and what are its advantages?</b></div>
+<div class="field"><ul>
+<li><div><b>Definition:</b> Data is split into small <b>packets</b>; each packet is routed independently through the network.</div></li>
+<li><div><b>Advantages:</b></div>
+<ul>
+<li>Efficient sharing of network resources (many users share the same link)</li>
+<li>Robust — packets can take different paths if a route fails</li>
+<li>Good for <b>bursty traffic</b> (internet-style communication)</li>
+<li>Scalable and flexible</li>
+<li>No dedicated circuit reservation required</li>
+</ul></li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Closest lecture:</b> <b>ch3 – Mobile Networks</b></li>
+<li><b>Folie 13 (PDF p. 13):</b> UMTS summary explicitly mentions <b>"Packet switched networks"</b></li>
+<li><b>Also:</b> ch1 – Folie 2 (PDF p. 2): packet transmission concept (headers/bodies/packets)</li>
+<li><i>Note: No dedicated "packet switching vs circuit switching" theory slide found; ch3 summary is the strongest direct match.</i></li>
+</ul></div>
+<div class="tags">exam</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-exam-q05" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field"><b>Q5 – Why do we have different medium access strategies? Why is one not enough?</b></div>
+<div class="field"><ul>
+<li>Wireless environments and requirements differ a lot — <b>no single MAC fits all scenarios</b>.</li>
+<li><div><b>Different strategies optimize for different goals:</b></div>
+<ul>
+<li><b>Contention-based (CSMA):</b> Simple, flexible, good for light/bursty traffic</li>
+<li><b>Scheduled / TDMA:</b> Predictable delay, better for real-time traffic</li>
+<li><b>FDMA / CDMA / OFDMA:</b> Better sharing in dense systems</li>
+<li><b>Polling / token-based:</b> Controlled access, fairness</li>
+</ul></li>
+<li><div><b>Trade-offs that force the choice:</b></div>
+<ul>
+<li>Latency vs. throughput</li>
+<li>Energy efficiency vs. performance</li>
+<li>Simplicity vs. determinism</li>
+<li>Low traffic vs. high traffic</li>
+<li>Short-range IoT vs. Wi-Fi vs. cellular</li>
+</ul></li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture:</b> <b>ch2 – Medium Access and Cellular Concepts</b></li>
+<li><b>Folie 2 (PDF p. 2):</b> Multiplexing + medium access overview</li>
+<li><b>Folie 3–7 (PDF pp. 3–7):</b> SDMA, FDMA, TDMA, CDMA + their tradeoffs (directly answers "why not one strategy")</li>
+<li><b>Folie 10 (PDF p. 10):</b> Limited frequency resources + interference (cellular motivation)</li>
+</ul></div>
+<div class="tags">exam</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-exam-q06" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field"><b>Q6 – Decompose $P_{rx}/P_{tx}$ into static and dynamic parts (logarithmic approach)</b></div>
+<div class="field"><ul>
+<li><div><b>Starting point:</b> $$\frac{P_{rx}}{P_{tx}} = \frac{A_{tx}A_{rx}G_{tx}G_{rx}}{d^2}$$</div></li>
+<li><div><b>Take $10\log_{10}(\cdot)$:</b>
+$$10\log_{10}\!\left(\frac{P_{rx}}{P_{tx}}\right) = 10\log_{10}(A_{tx}) + 10\log_{10}(A_{rx}) + 10\log_{10}(G_{tx}) + 10\log_{10}(G_{rx}) - 20\log_{10}(d)$$</div></li>
+<li><div><b>Decomposition:</b>
+$$L = \underbrace{\bigl(10\log_{10}A_{tx}+10\log_{10}A_{rx}+10\log_{10}G_{tx}+10\log_{10}G_{rx}\bigr)}_{\text{Static (design-time)}} + \underbrace{\bigl(-20\log_{10}d\bigr)}_{\text{Dynamic (runtime)}}$$</div></li>
+<li><b>Static:</b> Antenna sizes and nominal gains — chosen during design.</li>
+<li><b>Dynamic:</b> Distance $d$ — changes at runtime.</li>
+<li><i>If gains are controlled by beamforming, they can be moved to the dynamic part.</i></li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture:</b> <b>ch1 – Basics of Wireless Communications</b></li>
+<li><b>Folie 6 (PDF p. 6):</b> Received/transmitted power relation and antenna/path factors</li>
+<li><b>Folie 7 (PDF p. 7):</b> Path loss in dB and distance effects (logarithmic decomposition)</li>
+</ul></div>
+<div class="tags">exam</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-exam-q07" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field"><b>Q7 – Why choose between 2.4 GHz and 5 GHz in IEEE 802.11?</b></div>
+<div class="field"><ul>
+<li><div><b>2.4 GHz:</b></div>
+<ul>
+<li>Longer range, better wall penetration</li>
+<li>More interference (Bluetooth, microwaves, many Wi-Fi devices)</li>
+<li>Fewer non-overlapping channels</li>
+</ul></li>
+<li><div><b>5 GHz:</b></div>
+<ul>
+<li>Higher throughput potential</li>
+<li>More channels / less interference</li>
+<li>Shorter range, worse wall penetration</li>
+</ul></li>
+<li><b>Choice depends on:</b> Need for <b>range/coverage</b> → 2.4 GHz; need for <b>speed/capacity</b> → 5 GHz.</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture:</b> <b>ch4 – IEEE 802.11</b></li>
+<li><b>Folie 3 (PDF p. 3):</b> Channelization, overlap, spectrum width for 2.4 vs 5 GHz</li>
+<li><b>Folie 4 (PDF p. 4):</b> Practical tradeoff list (coverage, interference, speed, penetration)</li>
+<li><b>Folie 5–6 (PDF pp. 5–6):</b> 802.11a vs 802.11b — frequency/range tradeoffs and interference at 2.4 GHz</li>
+</ul></div>
+<div class="tags">exam</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-exam-q08" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field"><b>Q8 – How does dynamic frequency hopping in IEEE 802.15.1 avoid interference?</b></div>
+<div class="field"><ul>
+<li>IEEE 802.15.1 (Bluetooth Classic) uses <b>Frequency Hopping Spread Spectrum (FHSS)</b>.</li>
+<li>Transmitter and receiver hop together across many channels in a <b>pseudo-random sequence</b>.</li>
+<li>If some channels are noisy/interfered, communication only suffers <b>briefly on those hops</b>.</li>
+<li>With <b>Adaptive Frequency Hopping (AFH)</b>, bad channels are detected and <b>excluded</b> from the hop sequence.</li>
+<li>Result: Better robustness in crowded 2.4 GHz environments (e.g., coexistence with Wi-Fi).</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture:</b> <b>ch6 – Bluetooth Low Energy</b> (covers AFH/channel hopping)</li>
+<li><b>Folie 26 (PDF p. 26):</b> AFH + Channel Selection Algorithms (CSA), pseudo-random hopping</li>
+<li><b>Folie 29 (PDF p. 29):</b> Master/slave hop to the same channel based on CSA within a connection interval</li>
+<li><b>Folie 33 (PDF p. 33):</b> "Why BLE needs AFH" + avoiding interference (e.g., Wi-Fi)</li>
+<li><b>Folie 14–15 (PDF pp. 14–15):</b> 2.4 GHz band shared with Wi-Fi/ZigBee and BLE channel structure context</li>
+</ul></div>
+<div class="tags">exam</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-exam-q09" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field"><b>Q9 – What is header compression in IEEE 802.15.4 networks and why do we need it?</b></div>
+<div class="field"><ul>
+<li>IEEE 802.15.4 frames are very small (low-power IoT links), so protocol headers can be a <b>huge overhead</b>.</li>
+<li><div><b>Header compression</b> reduces upper-layer headers (IPv6/UDP) by:</div>
+<ul>
+<li>Removing fields that are known or constant</li>
+<li>Encoding fields in shorter forms</li>
+<li>Inferring values from context</li>
+</ul></li>
+<li><div><b>Why needed:</b></div>
+<ul>
+<li>802.15.4 has a small MTU / payload (≈80–100 bytes after frame overhead)</li>
+<li>Without compression, headers waste most of the packet</li>
+<li>Compression improves payload efficiency, energy consumption, and throughput</li>
+</ul></li>
+<li><i>Especially critical for <b>6LoWPAN</b> over 802.15.4 (RFC 6282 / LOWPAN_IPHC).</i></li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture:</b> <b>ch8 – 6LoWPAN</b></li>
+<li><b>Slide 38 (PDF p. 38):</b> 6LoWPAN adaptation format, IPv6/UDP header compression over low-power wireless links</li>
+<li><b>Slides 46–47 (PDF pp. 46–47):</b> Header compression intro + motivation ("large IPv6 datagram… save resources")</li>
+<li><b>Slide 48 (PDF p. 48):</b> Full IPv6+UDP header size shown (why compression is needed)</li>
+<li><b>Slides 57–60 (PDF pp. 57–60):</b> LOWPAN_IPHC + UDP header compression details (RFC 6282)</li>
+<li><b>Slide 62 (PDF p. 62):</b> 802.15.4 payload only ~80–100 bytes — reinforces need for compression</li>
+</ul></div>
+<div class="tags">exam</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-exam-q10" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field"><b>Q10 – Reflector problem: determine the received power</b><br>A lossless reflector is placed between transmitter and receiver. Each hop follows an inverse-square law $P \propto 1/d^2$. What is $P_{received}$?</div>
+<div class="field"><ul>
+<li><div><b>Power at reflector (first hop):</b> $$P_{reflector} = \frac{P_{transmitter}}{d^2}$$</div></li>
+<li><div><b>Power at receiver (second hop, lossless reflection):</b> $$P_{received} = \frac{P_{reflector}}{d^2} = \frac{P_{transmitter}}{d^2} \cdot \frac{1}{d^2} = \frac{P_{transmitter}}{d^4}$$</div></li>
+<li>$$\boxed{P_{received} = \frac{P_{transmitter}}{d^4}}$$</li>
+<li><i>Note: $d$ here is the per-hop distance. If $d$ is the total distance, the result differs by a constant factor.</i></li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture:</b> <b>ch1 – Basics of Wireless Communications</b></li>
+<li><b>Folie 3–4 (PDF pp. 3–4):</b> Reflection propagation concept</li>
+<li><b>Folie 6 (PDF p. 6):</b> Received/transmitted power relation and path dependence</li>
+</ul></div>
+<div class="tags">exam</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
 </div>
 </body>
 </html>
