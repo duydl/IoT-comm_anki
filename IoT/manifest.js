@@ -85,14 +85,6 @@ window.deckManifest = {
             "modelsPath": "10/models.json"
         },
         {
-            "name": "11",
-            "deckPath": "11/deck.json",
-            "notesPath": "11/notes.json",
-            "notesHtmlPath": "11/notes.html",
-            "children": [],
-            "modelsPath": "11/models.json"
-        },
-        {
             "name": "exam",
             "deckPath": "exam/deck.json",
             "notesPath": "exam/notes.json",

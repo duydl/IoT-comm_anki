@@ -2,7 +2,7 @@
     "note_models": [
         {
             "__type__": "NoteModel",
-            "crowdanki_uuid": "77e316ae-5666-4ec8-95c6-5377d6e5e0d9",
+            "crowdanki_uuid": "bea68faa-fb85-11f0-a6bc-141333f762ee",
             "css": ".card {\n    font-family: arial;\n    font-size: 20px;\n    line-height: 1.5;\n    text-align: left;\n    color: black;\n    background-color: white;\n}\n",
             "flds": [
                 {

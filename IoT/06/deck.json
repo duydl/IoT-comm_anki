@@ -4,10 +4,15 @@
     "crowdanki_uuid": "f85885ef-2624-4072-839f-7cdf19437b50",
     "deck_config_uuid": "274c09d8-6510-40b1-a0fe-0c057c88a159",
     "desc": "",
+    "desiredRetention": null,
     "dyn": 0,
     "extendNew": 0,
     "extendRev": 0,
     "media_files": [],
     "mid": 1739000001005,
-    "name": "06"
+    "name": "06",
+    "newLimit": null,
+    "newLimitToday": null,
+    "reviewLimit": null,
+    "reviewLimitToday": null
 }
