@@ -105,6 +105,299 @@
 <div class="tags">lec05</div>
 <div class="extra" key="__type__">"Note"</div>
 </div>
+
+<div class="card" guid="iot-05-c01" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">What is the general idea of <b>IEEE 802.15.4</b>?</div>
+<div class="field"><ul>
+<li>A protocol for <b>very low-cost, low-power communication</b> in <b>Low-Rate Wireless Personal Area Networks (LR-WPANs)</b>.</li>
+<li>Targets simple, embedded IoT devices — sensors, actuators, home automation.</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 5 – IEEE 802.15.4</b></li>
+<li><b>Ref:</b> IEEE 802.15.4 Overview</li>
+</ul></div>
+<div class="tags">lec05</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-05-c02" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">What core features of IEEE 802.15.4 make it suitable for IoT sensor networks?</div>
+<div class="field"><ul>
+<li><b>Low power consumption</b></li>
+<li><b>Low data rate</b></li>
+<li><b>Small packet size</b></li>
+<li><b>Close proximity</b> (short range)</li>
+<li><b>Simplicity</b> — low hardware/software complexity</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 5 – IEEE 802.15.4</b></li>
+<li><b>Ref:</b> IEEE 802.15.4 Overview</li>
+</ul></div>
+<div class="tags">lec05</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-05-c03" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">What is <b>Zigbee</b> in relation to IEEE 802.15.4, and what maximum data rate is shown?</div>
+<div class="field"><ul>
+<li>Zigbee is an <b>IEEE 802.15.4-based specification</b> — it uses 802.15.4 as its PHY and MAC layer.</li>
+<li>Maximum data rate shown in the lecture: <b>250 kbit/s</b> (at 2.4 GHz).</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 5 – IEEE 802.15.4</b></li>
+<li><b>Ref:</b> Zigbee: An IEEE 802.15.4-based specification</li>
+</ul></div>
+<div class="tags">lec05</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-05-c04" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">Why is <b>low transmission power</b> important in IEEE 802.15.4 systems?</div>
+<div class="field"><ul>
+<li>It enables <b>long battery life</b> — critical for sensor nodes and home automation devices that cannot be frequently recharged.</li>
+<li>Low transmission power also limits interference range, allowing denser deployments.</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 5 – IEEE 802.15.4</b></li>
+<li><b>Ref:</b> Transmission Power</li>
+</ul></div>
+<div class="tags">lec05</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-05-c05" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">What are the main responsibilities of the <b>MAC</b> and <b>PHY</b> layers in the 802.15.4 protocol architecture?</div>
+<div class="field"><ul>
+<li><b>MAC layer:</b> Channel access control, beaconing, GTS management, frame validation/formatting/addressing.</li>
+<li><b>PHY layer:</b> Data transmission service, PHY management interface, RF transceiver low-level control (modulation, demodulation, CCA).</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 5 – IEEE 802.15.4</b></li>
+<li><b>Ref:</b> Protocol Architecture</li>
+</ul></div>
+<div class="tags">lec05</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-05-c06" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">What <b>operating bands</b> are shown for IEEE 802.15.4 PHY?</div>
+<div class="field"><ul>
+<li><b>868 MHz</b> — Europe (EU), 1 channel</li>
+<li><b>902–928 MHz</b> — North America (NA), 10 channels</li>
+<li><b>2.4 GHz ISM</b> — worldwide, 16 channels, highest data rate (250 kbit/s)</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 5 – IEEE 802.15.4</b></li>
+<li><b>Ref:</b> PHY Overview – Operating Frequency Bands</li>
+</ul></div>
+<div class="tags">lec05</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-05-c07" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">What are the <b>PHY packet fields</b> in IEEE 802.15.4?</div>
+<div class="field"><ul>
+<li><b>Preamble</b> – synchronization sequence</li>
+<li><b>Start of Packet Delimiter (SFD/SPD)</b> – marks frame start</li>
+<li><b>PHR (PHY Header)</b> – contains frame length</li>
+<li><b>PSDU (PHY Service Data Unit / payload)</b> – the actual data</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 5 – IEEE 802.15.4</b></li>
+<li><b>Ref:</b> PHY Overview – Packet Structure</li>
+</ul></div>
+<div class="tags">lec05</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-05-c08" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">What are the two <b>MAC channel access modes</b> in IEEE 802.15.4?</div>
+<div class="field"><ul>
+<li><b>Beacon-enabled duty-cycled mode</b> — coordinator sends periodic beacons; devices follow a superframe (CAP + optional CFP + inactive period).</li>
+<li><b>Non-beacon-enabled mode</b> — no coordinator beacons; devices use unslotted CSMA-CA.</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 5 – IEEE 802.15.4</b></li>
+<li><b>Ref:</b> MAC Protocols</li>
+</ul></div>
+<div class="tags">lec05</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-05-c09" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">What is the difference between <b>contention-based</b> and <b>contention-free</b> access in IEEE 802.15.4?</div>
+<div class="field"><ul>
+<li><b>Contention-based:</b> Uses <b>CSMA-CA</b> (slotted or unslotted) — devices compete, no timing guarantees.</li>
+<li><b>Contention-free:</b> Coordinator allocates <b>Guaranteed Time Slots (GTS)</b> for exclusive device use — deterministic, bounded latency.</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 5 – IEEE 802.15.4</b></li>
+<li><b>Ref:</b> Medium Access Management</li>
+</ul></div>
+<div class="tags">lec05</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-05-c10" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">What are the main parts of the <b>superframe</b> in beacon-enabled IEEE 802.15.4?</div>
+<div class="field"><ul>
+<li><b>Beacon</b> — coordinator frame that starts the superframe and carries timing/config info.</li>
+<li><b>Active period</b> containing:
+<ul>
+<li><b>CAP (Contention Access Period)</b> — CSMA-CA based access.</li>
+<li><b>CFP (Contention-Free Period)</b> — optional GTS slots.</li>
+</ul></li>
+<li><b>Inactive period</b> — no transmissions; devices <b>sleep</b> to save energy.</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 5 – IEEE 802.15.4</b></li>
+<li><b>Ref:</b> Superframe structure: Part 1 / Superframe structure: Part 2</li>
+</ul></div>
+<div class="tags">lec05</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-05-c11" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">Why is the <b>superframe structure</b> important in IEEE 802.15.4?</div>
+<div class="field"><ul>
+<li><b>Energy efficiency</b> — sleep scheduling during the inactive period.</li>
+<li><b>Synchronization</b> — beacons keep all devices aligned in time.</li>
+<li><b>Structured channel access</b> — separates contention-based and contention-free periods.</li>
+<li><b>Flexibility and scalability</b> — duty cycle and GTS count are configurable.</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 5 – IEEE 802.15.4</b></li>
+<li><b>Ref:</b> Superframe Summary</li>
+</ul></div>
+<div class="tags">lec05</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-05-c12" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">What does the <b>BPSK PHY</b> section describe at a high level?</div>
+<div class="field"><ul>
+<li>Describes the <b>PPDU (PHY Protocol Data Unit)</b> format with three sections:
+<ul>
+<li><b>SHR (Synchronization Header)</b> — preamble + SFD for sync and frame start detection.</li>
+<li><b>PHR (PHY Header)</b> — frame length field.</li>
+<li><b>PHY payload</b> — carries the PSDU (data).</li>
+</ul></li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 5 – IEEE 802.15.4</b></li>
+<li><b>Ref:</b> Binary phase-shift keying (BPSK) PHY</li>
+</ul></div>
+<div class="tags">lec05</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-05-c13" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">What is the <b>modulation / spreading chain</b> for the BPSK PHY in IEEE 802.15.4?</div>
+<div class="field"><ul>
+<li><b>Step 1 — Differential encoding:</b> Each bit is encoded relative to the previous bit.</li>
+<li><b>Step 2 — Bit-to-chip mapping (DSSS spreading):</b> Each bit is expanded to a chip sequence using a PN code.</li>
+<li><b>Step 3 — BPSK modulation:</b> Chip sequence modulates the carrier using binary phase shifts.</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 5 – IEEE 802.15.4</b></li>
+<li><b>Ref:</b> Modulation and spreading / Differential encoding / Bit-to-chip mapping / BPSK modulation</li>
+</ul></div>
+<div class="tags">lec05</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-05-c14" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">Why is <b>bit-to-chip mapping</b> used in the 802.15.4 BPSK PHY?</div>
+<div class="field"><ul>
+<li>Spreads each data bit into a longer chip sequence using a PN code (DSSS).</li>
+<li>Benefits:
+<ul>
+<li>Improved <b>interference resistance</b> — narrowband interference affects only a few chips.</li>
+<li>Makes <b>unauthorized demodulation harder</b> without knowing the spreading code.</li>
+</ul></li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 5 – IEEE 802.15.4</b></li>
+<li><b>Ref:</b> Bit-to-chip mapping</li>
+</ul></div>
+<div class="tags">lec05</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-05-c15" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">What does the lecture say about <b>O-QPSK vs BPSK</b>?</div>
+<div class="field"><ul>
+<li><b>O-QPSK (Offset QPSK):</b> Higher bandwidth efficiency — <b>2 bits/symbol</b> vs 1 bit/symbol for BPSK.</li>
+<li>Also more resilient: offset between I and Q channels prevents simultaneous transitions → <b>reduced abrupt phase changes</b> → less amplitude variation → more robust to nonlinear amplifiers.</li>
+<li>O-QPSK is used for the 2.4 GHz PHY in 802.15.4; BPSK for 868 / 915 MHz.</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 5 – IEEE 802.15.4</b></li>
+<li><b>Ref:</b> Other good modulation</li>
+</ul></div>
+<div class="tags">lec05</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-05-c16" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">What <b>topology types</b> are supported by IEEE 802.15.4?</div>
+<div class="field"><ul>
+<li><b>Star topology</b> — all devices communicate via the network coordinator.</li>
+<li><b>Peer-to-peer topology</b> — devices can communicate directly with each other.</li>
+<li>At least one <b>FFD (Full Function Device)</b> acts as the PAN coordinator.</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 5 – IEEE 802.15.4</b></li>
+<li><b>Ref:</b> Topology Structure</li>
+</ul></div>
+<div class="tags">lec05</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-05-c17" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">What is the <b>PAN coordinator</b> responsible for during topology formation?</div>
+<div class="field"><ul>
+<li>Initiates network operations — starts the WPAN.</li>
+<li>Selects a <b>channel</b> and assigns a <b>PAN ID</b>.</li>
+<li>Establishes the new WPAN; other devices subsequently join.</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 5 – IEEE 802.15.4</b></li>
+<li><b>Ref:</b> Topology Formation</li>
+</ul></div>
+<div class="tags">lec05</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-05-c18" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">What is the defining characteristic of a <b>star network</b> in IEEE 802.15.4?</div>
+<div class="field"><ul>
+<li>All devices communicate <b>exclusively through the network coordinator</b> — not directly with each other.</li>
+<li>Simple, centralized control; coordinator is a single point of failure.</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 5 – IEEE 802.15.4</b></li>
+<li><b>Ref:</b> Star networks</li>
+</ul></div>
+<div class="tags">lec05</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-05-c19" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">What is the defining characteristic of a <b>peer-to-peer network</b> in IEEE 802.15.4?</div>
+<div class="field"><ul>
+<li>Devices can communicate <b>directly with each other</b> (if within range), without routing through the coordinator.</li>
+<li>A coordinator still handles registration/access management for the WPAN.</li>
+<li>Enables more flexible topologies — e.g., mesh networks.</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 5 – IEEE 802.15.4</b></li>
+<li><b>Ref:</b> Peer-to-Peer networks</li>
+</ul></div>
+<div class="tags">lec05</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
 </div>
 </body>
 </html>

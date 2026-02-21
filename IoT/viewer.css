@@ -121,3 +121,13 @@ html {
     background: #fdfdfd;
     padding: 10px;
 }
+
+/* Flip hint shown in model/preview mode */
+.card-flip-hint {
+    text-align: center;
+    font-size: 0.78rem;
+    color: #aaa;
+    padding: 6px 0 2px;
+    user-select: none;
+    letter-spacing: 0.03em;
+}

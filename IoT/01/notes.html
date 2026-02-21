@@ -67,6 +67,232 @@ Distance $d$ — changes at runtime.</div></li>
 <div class="tags">lec01</div>
 <div class="extra" key="__type__">"Note"</div>
 </div>
+
+<div class="card" guid="iot-01-c01" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">What is transmitted in digital communication, and how is it organized?</div>
+<div class="field"><ul>
+<li>Digital data is transmitted as a <b>bit stream</b>.</li>
+<li>The stream is organized into <b>packets</b>, each consisting of a <b>header</b> and a <b>body (payload)</b>.</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 1 – Basics of Wireless Communications</b></li>
+<li><b>Ref:</b> Introduction slides</li>
+</ul></div>
+<div class="tags">lec01</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-01-c02" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">What are the three main propagation mechanisms in wireless communication?</div>
+<div class="field"><ul>
+<li><b>Reflection</b> – signal bounces off surfaces larger than the wavelength.</li>
+<li><b>Diffraction</b> – signal bends around edges and obstacles.</li>
+<li><b>Scattering</b> – signal disperses when hitting objects comparable in size to the wavelength.</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 1 – Basics of Wireless Communications</b></li>
+<li><b>Ref:</b> Signal Propagation</li>
+</ul></div>
+<div class="tags">lec01</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-01-c03" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">What is the role of reflection, diffraction, and scattering in <b>LOS vs. non-LOS</b> reception?</div>
+<div class="field"><ul>
+<li><b>If LOS exists:</b> The LOS signal dominates; diffracted and scattered signals are usually not significant (reflections may still contribute).</li>
+<li><b>If no LOS:</b> <b>Diffraction</b> and <b>scattering</b> become the primary means of reception.</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 1 – Basics of Wireless Communications</b></li>
+<li><b>Ref:</b> Signal Propagation</li>
+</ul></div>
+<div class="tags">lec01</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-01-c04" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">What does an <b>antenna</b> do in a wireless system?</div>
+<div class="field"><ul>
+<li><b>Transmit:</b> Converts <b>electrical signals</b> into <b>electromagnetic waves</b>.</li>
+<li><b>Receive:</b> Converts <b>electromagnetic waves</b> back into <b>electrical signals</b>.</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 1 – Basics of Wireless Communications</b></li>
+<li><b>Ref:</b> Antenna slides</li>
+</ul></div>
+<div class="tags">lec01</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-01-c05" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">What is the difference between an <b>omni-directional</b> and a <b>directional</b> antenna?</div>
+<div class="field"><ul>
+<li><b>Omni-directional antenna:</b> Radiates and receives equally in <b>all directions</b> (idealized isotropic radiator).</li>
+<li><b>Directional antenna:</b> Concentrates radiation/reception in a <b>preferred direction</b> — higher gain in that direction, less elsewhere.</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 1 – Basics of Wireless Communications</b></li>
+<li><b>Ref:</b> Antenna slides</li>
+</ul></div>
+<div class="tags">lec01</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-01-c06" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">Which factors influence the <b>received power</b> in a line-of-sight wireless link?</div>
+<div class="field"><ul>
+<li><b>Transmitted power</b> $P_{tx}$</li>
+<li><b>Antenna gains</b> — transmitter gain $G_{tx}$ and receiver gain $G_{rx}$</li>
+<li><b>Distance / propagation path</b> $d$</li>
+<li><b>Wavelength</b> $\lambda$ (related to frequency $f = c/\lambda$)</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 1 – Basics of Wireless Communications</b></li>
+<li><b>Ref:</b> Antenna / received power relation slides</li>
+</ul></div>
+<div class="tags">lec01</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-01-c07" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">What are the three components of <b>total path loss</b>?</div>
+<div class="field"><ul>
+<li><b>Distance-dependent path loss</b> – deterministic decay with distance (e.g., $\propto d^2$ in free space).</li>
+<li><b>Shadowing</b> – slow variations due to obstacles (buildings, terrain); modeled as log-normal.</li>
+<li><b>Fast fading</b> – rapid fluctuations due to multipath interference; changes over short distances.</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 1 – Basics of Wireless Communications</b></li>
+<li><b>Ref:</b> Total Path Loss slides</li>
+</ul></div>
+<div class="tags">lec01</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-01-c08" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">Why is <b>modulation</b> needed in wireless communication?</div>
+<div class="field"><ul>
+<li>Modulation shifts information onto a <b>carrier wave</b> at a specific frequency.</li>
+<li>This allows efficient transmission over radio and enables <b>multiplexing</b> of many users on different carriers.</li>
+<li>Baseband signals (e.g., audio, data) cannot be radiated directly — they need to be up-converted to a suitable RF frequency (antenna size ∝ wavelength).</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 1 – Basics of Wireless Communications</b></li>
+<li><b>Ref:</b> Modulation slides</li>
+</ul></div>
+<div class="tags">lec01</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-01-c09" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">What is the basic idea of <b>Amplitude Modulation (AM)</b>?</div>
+<div class="field"><ul>
+<li>The <b>amplitude</b> of the carrier wave is varied in proportion to the information signal.</li>
+<li>Frequency and phase of the carrier remain constant.</li>
+<li>In digital form: <b>ASK (Amplitude Shift Keying)</b> — discrete amplitude levels represent bits.</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 1 – Basics of Wireless Communications</b></li>
+<li><b>Ref:</b> Amplitude Modulation slides</li>
+</ul></div>
+<div class="tags">lec01</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-01-c10" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">What is the relation between <b>antenna size</b> and <b>wavelength</b> for efficient transmission?</div>
+<div class="field"><ul>
+<li>Efficient antennas are sized relative to the wavelength of the carrier. A common rule: $$L \approx \frac{\lambda}{4}$$</li>
+<li>Higher frequencies → shorter wavelengths → smaller antennas (e.g., 2.4 GHz → ~3 cm; 37.5 GHz → ~1 mm).</li>
+<li>This is why IoT devices operating at higher frequencies can be very compact.</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 1 – Basics of Wireless Communications</b></li>
+<li><b>Ref:</b> Modulation / Antenna size slides (Folie 9)</li>
+</ul></div>
+<div class="tags">lec01</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-01-c11" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">What is the basic idea of <b>Frequency Modulation (FM)</b>?</div>
+<div class="field"><ul>
+<li>The <b>frequency</b> of the carrier wave varies according to the information signal.</li>
+<li>The amplitude remains approximately constant.</li>
+<li>FM is more robust to amplitude noise than AM, since information is in frequency, not amplitude.</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 1 – Basics of Wireless Communications</b></li>
+<li><b>Ref:</b> Frequency Modulation slides</li>
+</ul></div>
+<div class="tags">lec01</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-01-c12" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">What is <b>FSK</b>?</div>
+<div class="field"><ul>
+<li><b>FSK (Frequency Shift Keying)</b> is the <b>digital version</b> of frequency modulation.</li>
+<li>Discrete frequency values represent different digital symbols or bits (e.g., $f_1$ = bit 0, $f_2$ = bit 1).</li>
+<li>Simple to implement and robust to noise — widely used in low-rate wireless (e.g., Bluetooth BLE uses GFSK).</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 1 – Basics of Wireless Communications</b></li>
+<li><b>Ref:</b> Frequency Modulation / FSK slides</li>
+</ul></div>
+<div class="tags">lec01</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-01-c13" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">What is the basic idea of <b>Phase Modulation / PSK</b>?</div>
+<div class="field"><ul>
+<li>Information is encoded in the <b>phase</b> of the carrier signal.</li>
+<li>In digital form: <b>PSK (Phase Shift Keying)</b> — discrete phase values represent bits/symbols.</li>
+<li>Examples: <b>BPSK</b> (2 phases → 1 bit/symbol), <b>QPSK</b> (4 phases → 2 bits/symbol).</li>
+<li>Amplitude remains constant → more robust to amplitude variations than ASK.</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 1 – Basics of Wireless Communications</b></li>
+<li><b>Ref:</b> Phase Modulation / PSK slides</li>
+</ul></div>
+<div class="tags">lec01</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-01-c14" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">Why is <b>QAM</b> more bandwidth-efficient than simple AM?</div>
+<div class="field"><ul>
+<li>QAM uses <b>two orthogonal carriers</b> — the <b>In-phase (I)</b> and <b>Quadrature (Q)</b> channels.</li>
+<li>Both channels share the same bandwidth, effectively transmitting <b>two independent streams in parallel</b>.</li>
+<li>This doubles bandwidth efficiency compared to AM, which only uses one carrier dimension.</li>
+<li>Higher-order QAM (16-QAM, 64-QAM, 256-QAM) further increases bits per symbol by using more constellation points.</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 1 – Basics of Wireless Communications</b></li>
+<li><b>Ref:</b> Quadrature Amplitude Modulation (QAM) slides (Folie 22)</li>
+</ul></div>
+<div class="tags">lec01</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-01-c15" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">What is the key challenge when using <b>higher-order modulation</b> (e.g., high-order QAM)?</div>
+<div class="field"><ul>
+<li>Higher-order constellations place symbol points <b>closer together</b> in the signal space.</li>
+<li>This makes them <b>more sensitive to noise and interference</b> — a small perturbation can cause a symbol error.</li>
+<li>Requires a better <b>SNR</b>, more linear power amplifiers, and accurate synchronization.</li>
+<li>Trade-off: <b>more bits/symbol</b> (spectral efficiency) vs. <b>stricter channel quality requirements</b>.</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 1 – Basics of Wireless Communications</b></li>
+<li><b>Ref:</b> Quadrature Amplitude Modulation (QAM) slides</li>
+</ul></div>
+<div class="tags">lec01</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
 </div>
 </body>
 </html>

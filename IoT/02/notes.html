@@ -91,6 +91,244 @@
 <div class="tags">lec02</div>
 <div class="extra" key="__type__">"Note"</div>
 </div>
+
+<div class="card" guid="iot-02-c01" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">What is the difference between <b>multiplexing</b> and <b>medium access</b>?</div>
+<div class="field"><ul>
+<li><b>Multiplexing:</b> Enables concurrent usage of the medium without interference — in <b>space, time, frequency</b>, or by <b>code division</b>.</li>
+<li><b>Medium access:</b> Controls user access to the medium; implemented by combining/exploiting multiplex methods.</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 2 – Medium Access and Cellular Concepts</b></li>
+<li><b>Ref:</b> Medium Access</li>
+</ul></div>
+<div class="tags">lec02</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-02-c02" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">What is the main idea of <b>SDMA</b>, and why is pure space multiplexing usually not enough?</div>
+<div class="field"><ul>
+<li>In <b>SDMA</b>, a communication channel relates to a specific <b>region or physical infrastructure</b>.</li>
+<li>Pure space multiplexing is usually not enough because:
+<ul>
+<li>A secure distance between transmitters is required (to limit interference), and</li>
+<li>Each channel would need its own transmitting station.</li>
+</ul></li>
+<li>→ SDMA is mainly useful <b>in combination with other multiplex methods</b>.</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 2 – Medium Access and Cellular Concepts</b></li>
+<li><b>Ref:</b> Space Division Multiple Access (SDMA)</li>
+</ul></div>
+<div class="tags">lec02</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-02-c03" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">What is <b>FDMA</b>?</div>
+<div class="field"><ul>
+<li>In <b>FDMA (Frequency Division Multiple Access)</b>, specific frequencies are <b>permanently assigned</b> to transmission channels.</li>
+<li>Similar in concept to broadcast radio — each channel occupies a dedicated frequency band at all times.</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 2 – Medium Access and Cellular Concepts</b></li>
+<li><b>Ref:</b> Frequency Division Multiple Access</li>
+</ul></div>
+<div class="tags">lec02</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-02-c04" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">What determines the <b>bandwidth of a link</b> in FDMA?</div>
+<div class="field"><ul>
+<li>The <b>assigned frequency band</b> (carrier spacing / allocated band) determines the bandwidth of the link.</li>
+<li>Narrower bands → lower bandwidth per user; wider bands → higher bandwidth but fewer simultaneous users.</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 2 – Medium Access and Cellular Concepts</b></li>
+<li><b>Ref:</b> Frequency Division Multiple Access</li>
+</ul></div>
+<div class="tags">lec02</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-02-c05" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">What is <b>TDMA</b>, and what is required for it to work?</div>
+<div class="field"><ul>
+<li>In <b>TDMA (Time Division Multiple Access)</b>, the transmission medium is <b>slot-assigned</b> to channels for certain times.</li>
+<li>Users share the same frequency, each transmitting only in their assigned time slot.</li>
+<li>Requires <b>synchronization (timing)</b> between transmitting and receiving stations — can be static or dynamic.</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 2 – Medium Access and Cellular Concepts</b></li>
+<li><b>Ref:</b> Time Division Multiple Access</li>
+</ul></div>
+<div class="tags">lec02</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-02-c06" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">What is the core idea of <b>CDMA</b>?</div>
+<div class="field"><ul>
+<li>In <b>CDMA (Code Division Multiple Access)</b>, <b>orthogonal codes</b> are assigned to channels.</li>
+<li>Users can transmit on the <b>same frequency at the same time</b> — the codes allow the receiver to separate them.</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 2 – Medium Access and Cellular Concepts</b></li>
+<li><b>Ref:</b> Code Division Multiple Access</li>
+</ul></div>
+<div class="tags">lec02</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-02-c07" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">What are the main <b>requirements and challenges</b> of CDMA?</div>
+<div class="field"><ul>
+<li><b>Exact synchronization</b> is required between sender and receiver.</li>
+<li>Receiver must <b>know the sender's code</b>.</li>
+<li><b>Complex receivers</b> are needed — they must perform correlation to separate overlapping signals.</li>
+<li>Noise should <b>not be very high</b> — performance degrades significantly under high noise.</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 2 – Medium Access and Cellular Concepts</b></li>
+<li><b>Ref:</b> Code Division Multiple Access</li>
+</ul></div>
+<div class="tags">lec02</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-02-c08" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">In the CDMA example, how are the transmitted signals from two senders combined on the air?</div>
+<div class="field"><ul>
+<li>The signals <b>overlay on the air</b> — the combined received signal is the <b>sum</b> of both transmitted code signals: $$C = A_s + B_s$$</li>
+<li>(Ignoring faults/noise in the ideal example.)</li>
+<li>Neither sender needs to know the other is transmitting; the receiver handles the separation.</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 2 – Medium Access and Cellular Concepts</b></li>
+<li><b>Ref:</b> Code Division Multiple Access</li>
+</ul></div>
+<div class="tags">lec02</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-02-c09" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">How does a CDMA receiver recover <b>one sender's bit</b> from the combined signal?</div>
+<div class="field"><ul>
+<li>The receiver uses the target sender's key and computes the <b>inner product (correlation)</b> with the combined signal.</li>
+<li>If the result is <b>&gt; 0</b> → sent bit is interpreted as <b>1</b>.</li>
+<li>If the result is <b>&lt; 0</b> → sent bit is interpreted as <b>0</b>.</li>
+<li>Orthogonality of other codes ensures their contributions cancel out in the correlation.</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 2 – Medium Access and Cellular Concepts</b></li>
+<li><b>Ref:</b> Code Division Multiple Access</li>
+</ul></div>
+<div class="tags">lec02</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-02-c10" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">What are the major <b>challenges in cellular systems</b>, and what is the main solution?</div>
+<div class="field"><ul>
+<li><b>Challenges:</b>
+<ul>
+<li>Limited frequency resources</li>
+<li>Interference between cells using the same frequency</li>
+</ul></li>
+<li><b>Solution:</b> Reuse frequency channels in <b>remote (non-adjacent) cells</b> — cells that are far enough apart can share the same frequencies without causing harmful interference.</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 2 – Medium Access and Cellular Concepts</b></li>
+<li><b>Ref:</b> Cellular Concepts</li>
+</ul></div>
+<div class="tags">lec02</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-02-c11" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">What is the <b>recommended reuse distance formula</b> in cellular systems?</div>
+<div class="field"><ul>
+<li>$$D = \sqrt{3N} \cdot R$$</li>
+<li>Where:
+<ul>
+<li>$N$ = number of different cell types (cluster size / reuse factor)</li>
+<li>$R$ = cell radius</li>
+<li>$D$ = minimum distance between cells using the same frequency</li>
+</ul></li>
+<li>Larger $N$ → larger reuse distance → less interference, but fewer simultaneous frequency reuses.</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 2 – Medium Access and Cellular Concepts</b></li>
+<li><b>Ref:</b> Cellular Concepts</li>
+</ul></div>
+<div class="tags">lec02</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-02-c12" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">What is the difference between <b>hard handover</b> and <b>soft handover</b>?</div>
+<div class="field"><ul>
+<li><b>Hard handover:</b> Active connection is disconnected <b>before</b> the connection to the new cell is established ("break before make").</li>
+<li><b>Soft handover:</b> Active connection is disconnected <b>after</b> the connection to the new cell is established ("make before break").</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 2 – Medium Access and Cellular Concepts</b></li>
+<li><b>Ref:</b> Handover</li>
+</ul></div>
+<div class="tags">lec02</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-02-c13" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">What is the difference between <b>intra-cell</b> and <b>inter-cell</b> handover?</div>
+<div class="field"><ul>
+<li><b>Intra-cell handover:</b> Switch-over <b>inside the same cell</b> — e.g., to another frequency or timeslot within the same base station.</li>
+<li><b>Inter-cell handover:</b> Switch-over <b>to a neighboring cell</b> — the mobile station connects to a different base station.</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 2 – Medium Access and Cellular Concepts</b></li>
+<li><b>Ref:</b> Handover</li>
+</ul></div>
+<div class="tags">lec02</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-02-c14" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">What is <b>inter-system handover</b>?</div>
+<div class="field"><ul>
+<li>Inter-system handover is switching between <b>different wireless technologies</b>.</li>
+<li>Example: <b>LTE → 5G</b>, or Wi-Fi → LTE.</li>
+<li>Requires both systems to be compatible in terms of authentication and session continuity.</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 2 – Medium Access and Cellular Concepts</b></li>
+<li><b>Ref:</b> Handover</li>
+</ul></div>
+<div class="tags">lec02</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
+<div class="card" guid="iot-02-c15" note_model_uuid="bea68faa-fb85-11f0-a6bc-141333f762ee">
+<div class="field">What is the point of the <b>frequency assignment examples</b> (large vs. small cells)?</div>
+<div class="field"><ul>
+<li>They show that different systems and cell sizes use different <b>reuse factors $N$</b>.</li>
+<li>Changing $N$ changes the <b>reuse ratio $D/R$</b> — affecting:
+<ul>
+<li>Interference level between co-channel cells</li>
+<li>Capacity planning (how many independent frequency sets are needed)</li>
+</ul></li>
+<li>Smaller cells can reuse frequencies more aggressively (smaller $N$), increasing capacity but requiring more careful interference management.</li>
+</ul></div>
+<div class="field"><ul>
+<li><b>Lecture 2 – Medium Access and Cellular Concepts</b></li>
+<li><b>Ref:</b> Frequency Assignment</li>
+</ul></div>
+<div class="tags">lec02</div>
+<div class="extra" key="__type__">"Note"</div>
+</div>
+
 </div>
 </body>
 </html>
