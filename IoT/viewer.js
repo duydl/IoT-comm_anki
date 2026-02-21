@@ -92,33 +92,15 @@ class DeckViewer {
         this.els.container.innerHTML = 'Loading...';
 
         try {
-            // Load deck data concurrently
-            // Load deck data concurrently. Attempt notes.json first, fallback to notes.html
-            const deckDataPromise = this.fetchJSON(node.deckPath);
-            let notesDataPromise = this.fetchJSON(node.notesPath).catch(() => null);
-
-            const [deckData, notesDataJson] = await Promise.all([
-                deckDataPromise,
-                notesDataPromise
+            // Load deck.json and notes.html concurrently — HTML is the single source of truth
+            const [deckData, htmlText] = await Promise.all([
+                this.fetchJSON(node.deckPath),
+                fetch(node.notesHtmlPath).then(r => r.ok ? r.text() : Promise.reject(r.status))
             ]);
 
-            let notesData = notesDataJson;
-            if (!notesData) {
-                console.log("notes.json not found, attempting to load from notes.html...");
-                const notesHtmlPath = node.notesHtmlPath || node.notesPath.replace('notes.json', 'notes.html');
-                const htmlResponse = await fetch(notesHtmlPath);
-                if (htmlResponse.ok) {
-                    const htmlText = await htmlResponse.text();
-                    notesData = this.parseNotesHtml(htmlText);
-                } else {
-                    console.warn("Could not load notes from json or html.");
-                    notesData = [];
-                }
-            }
+            const notesData = this.parseNotesHtml(htmlText);
 
-            // Attempt to load models. Try current deck folder first, else look at root/manifest if defined?
-            // Actually, for hierarchical export, models are often in models.json in the deck folder 
-            // OR passed down. For simplicity, we check for models.json in deck dir.
+            // Load models for this deck folder if available
             let modelsData = null;
             if (node.modelsPath) {
                 modelsData = await this.fetchJSON(node.modelsPath).catch(() => null);
@@ -133,15 +115,13 @@ class DeckViewer {
                         this.models[model.id] = model;
                     }
                 });
-
-                // Preload libraries for Raw Mode availability
                 this.preloadLibraries(modelsData.note_models);
             }
 
             this.renderCards(notesData, deckData);
         } catch (error) {
             console.error("Error loading deck:", error);
-            this.els.container.innerHTML = `<div class="error">Error loading deck: ${error.message}.<br>Note: Browser security blocks local file access (file://). Use a local server (python -m http.server).</div>`;
+            this.els.container.innerHTML = `<div class="error">Error loading deck: ${error}</div>`;
         }
     }
 
@@ -285,7 +265,7 @@ class DeckViewer {
         table.style.width = '100%';
         table.style.borderCollapse = 'collapse';
 
-        note.fields.forEach((fieldValue, idx) => {
+        (note.fields || []).forEach((fieldValue, idx) => {
             const row = document.createElement('tr');
 
             const th = document.createElement('th');
@@ -334,16 +314,21 @@ class DeckViewer {
         cardRender.className = 'card-render';
 
         // First template usually used (Card 1)
-        const tmpl = model.tmpls[0];
+        const tmpl = model.tmpls && model.tmpls[0];
+        if (!tmpl) {
+            // No template available — fall back to raw rendering
+            this.renderNoteRaw(container, note, model);
+            return;
+        }
 
         const css = model.css || "";
-        const qfmt = tmpl.qfmt;
-        const afmt = tmpl.afmt;
+        const qfmt = tmpl.qfmt || "";
+        const afmt = tmpl.afmt || "";
 
         // Prepare context for template
         const context = {};
-        note.fields.forEach((fieldValue, idx) => {
-            const fieldDef = model.flds[idx];
+        (note.fields || []).forEach((fieldValue, idx) => {
+            const fieldDef = model.flds && model.flds[idx];
             if (fieldDef) {
                 context[fieldDef.name] = fieldValue;
             }
@@ -359,25 +344,47 @@ class DeckViewer {
         // In Anki, {{FrontSide}} in back template is replaced by front content
         backHtml = backHtml.replace(/\{\{FrontSide\}\}/g, frontHtml);
 
-        // Combine for visualization: Front <hr> Back
-        let fullHtml = `
+        // Build front and back as separate sides; hoist shared resources once
+        let combinedHtml = `
             <style>
                 ${css}
                 .card { font-family: arial; font-size: 20px; text-align: center; color: black; background-color: white; }
                 hr#answer { border: 0; border-top: 1px dashed #ccc; margin: 15px 0; }
             </style>
-            <div class="card">
-                ${frontHtml}
-                <hr id="answer">
-                ${backHtml}
-            </div>
+            <div class="card-face card-front">${frontHtml}</div>
+            <div class="card-face card-back" style="display:none">${backHtml}</div>
         `;
 
         // Hoist resources (Scripts/Links) to global scope
-        fullHtml = this.hoistResources(fullHtml);
+        combinedHtml = this.hoistResources(combinedHtml);
 
-        // Set content directly
-        cardRender.innerHTML = fullHtml;
+        cardRender.innerHTML = combinedHtml;
+
+        // Flip hint label shown below the active face
+        const flipHint = document.createElement('div');
+        flipHint.className = 'card-flip-hint';
+        flipHint.textContent = 'Click to show answer ▾';
+        cardRender.appendChild(flipHint);
+
+        // Flip state tracker and click handler
+        cardRender.dataset.side = 'front';
+        cardRender.style.cursor = 'pointer';
+        cardRender.addEventListener('click', () => {
+            const front = cardRender.querySelector('.card-front');
+            const back  = cardRender.querySelector('.card-back');
+            if (cardRender.dataset.side === 'front') {
+                front.style.display = 'none';
+                back.style.display  = '';
+                flipHint.textContent = 'Click to show question ▴';
+                cardRender.dataset.side = 'back';
+            } else {
+                front.style.display = '';
+                back.style.display  = 'none';
+                flipHint.textContent = 'Click to show answer ▾';
+                cardRender.dataset.side = 'front';
+            }
+        });
+
         container.appendChild(cardRender);
 
         // Tags bar
